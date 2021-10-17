@@ -14,5 +14,10 @@ import ResumeForm from './ResumeForm.vue'
 .resume-section{
   max-width: 600px;
   margin: auto;
+  min-height: 80vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
