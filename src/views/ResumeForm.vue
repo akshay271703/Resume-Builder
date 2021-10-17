@@ -10,7 +10,10 @@
       @contactUpdated="handleContactUpdated"
       :updatedContact="user_data.contact"
      />
-    <Social v-if="getResumeState==3" />
+    <Social v-if="getResumeState==3"
+      @socialUpdated="handleSocialUpdated"
+      :updatedSocial="user_data.social"
+     />
   </div>
 </template>
 
@@ -46,6 +49,9 @@ export default {
     },
     handleContactUpdated(contactData){
       this.user_data.contact = contactData;
+    },
+    handleSocialUpdated(socialData){
+      this.user_data.social = socialData;
     }
   },
   computed: {
