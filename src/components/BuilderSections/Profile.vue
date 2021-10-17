@@ -53,6 +53,7 @@ export default {
         return;
       }
       // Move to next Section
+      this.$emit('profileUpdated', this.profile);
       this.$store.dispatch('setResumeState', this.getResumeState + 1);
     }
   },

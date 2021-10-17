@@ -1,7 +1,10 @@
 <template>
   <div class="form-body">
     <h1 class="title my-4">Please fill up the form and we'll generate your resume within seconds.</h1>
-    <Profile v-if="getResumeState==1" /> 
+    <Profile 
+      v-if="getResumeState==1" 
+      @profileUpdated="handleProfileUpdated"
+    /> 
     <Contact v-if="getResumeState==2" />
     <Social v-if="getResumeState==3" />
   </div>
@@ -31,6 +34,11 @@ export default {
         certifications: [],
         projects: []
       }
+    }
+  },
+  methods: {
+    handleProfileUpdated(profileData){
+      this.user_data.profile = profileData
     }
   },
   computed: {
