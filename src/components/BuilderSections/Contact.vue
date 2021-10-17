@@ -15,7 +15,7 @@
         v-model="contact.email"
       ></v-text-field>
       <div class="errorMessageDiv my-2 error white--text px-5" v-if="errorMessage" >{{ errorMessage }}</div>
-      <SectionFooter @next="handleOnNext" />
+      <SectionFooter @next="handleOnNext" @prev="handleOnPrev" />
     </div> 
   </div>
 </template>
@@ -25,6 +25,7 @@ import { mapGetters } from 'vuex';
 import { contactValidator } from '@/composables/validators';
 import SectionFooter from '@/components/UI/SectionFooter.vue';
 export default {
+  props: ['updatedContact'],
   components: { SectionFooter },
   data(){
     return{
@@ -34,6 +35,11 @@ export default {
         email: ''
       },
       errorMessage: ``
+    }
+  },
+  created(){
+    if(this.updatedContact.email){
+      this.contact = this.updatedContact
     }
   },
   methods :{
@@ -51,8 +57,11 @@ export default {
         return;
       }
       // Move to next Section
-      this.$emit('profileUpdated', this.profile);
+      this.$emit('contactUpdated', this.contact);
       this.$store.dispatch('setResumeState', this.getResumeState + 1);
+    },
+    handleOnPrev(){
+      this.$store.dispatch('setResumeState', this.getResumeState - 1);
     }
   },
   computed : {

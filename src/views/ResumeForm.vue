@@ -4,8 +4,12 @@
     <Profile 
       v-if="getResumeState==1" 
       @profileUpdated="handleProfileUpdated"
+      :updatedProfile="user_data.profile"
     /> 
-    <Contact v-if="getResumeState==2" />
+    <Contact v-if="getResumeState==2"
+      @contactUpdated="handleContactUpdated"
+      :updatedContact="user_data.contact"
+     />
     <Social v-if="getResumeState==3" />
   </div>
 </template>
@@ -38,7 +42,10 @@ export default {
   },
   methods: {
     handleProfileUpdated(profileData){
-      this.user_data.profile = profileData
+      this.user_data.profile = profileData;
+    },
+    handleContactUpdated(contactData){
+      this.user_data.contact = contactData;
     }
   },
   computed: {

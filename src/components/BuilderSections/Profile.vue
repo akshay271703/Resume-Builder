@@ -27,6 +27,7 @@ import { profileValidator } from '@/composables/validators';
 import SectionFooter from '@/components/UI/SectionFooter.vue';
 export default {
   components: { SectionFooter },
+  props: ['updatedProfile'],
   data(){
     return {
       profile: {
@@ -36,6 +37,11 @@ export default {
         image: ''
       },
       errorMessage: ``
+    }
+  },
+  created(){
+    if(this.updatedProfile.introduction){
+      this.profile = this.updatedProfile
     }
   },
   methods: {
