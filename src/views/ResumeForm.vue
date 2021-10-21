@@ -1,6 +1,6 @@
 <template>
   <div class="form-body">
-    <h1 class="title my-4">Please fill up the form and we'll generate your resume within seconds.</h1>
+    <!-- <h1 class="title my-4">Please fill up the form and we'll generate your resume within seconds.</h1> -->
     <Profile 
       v-if="getResumeState==1" 
       @profileUpdated="handleProfileUpdated"
@@ -14,6 +14,8 @@
       @socialUpdated="handleSocialUpdated"
       :updatedSocial="user_data.social"
      />
+     <LanguageSkills v-if="getResumeState==4"
+     />
   </div>
 </template>
 
@@ -22,11 +24,13 @@ import { mapGetters } from 'vuex'
 import Profile from '@/components/BuilderSections/Profile.vue'
 import Contact from '@/components/BuilderSections/Contact.vue'
 import Social from '@/components/BuilderSections/Social.vue'
+import LanguageSkills from '@/components/BuilderSections/LanguageSkills.vue' 
 export default {
   components : { 
     Profile,
     Contact,
-    Social
+    Social,
+    LanguageSkills
   },
   data(){
     return{

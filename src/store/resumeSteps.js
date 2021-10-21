@@ -1,5 +1,5 @@
 const state = {
-  resumeState: 1
+  resumeState: 4
 }
 
 const actions = {
