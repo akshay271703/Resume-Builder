@@ -28,39 +28,48 @@ const getDummyData = () =>{
     skills: ['HTML','CSS', 'JAVASCRIPT', 'REACT', 'REDUX', 'SASS'],
     work_history: [
       {
+        id: 1,
         title: 'Software Engineer',
-        startDate: '2021-12-01',
-        endDate: '',
-        institue: 'Google'
+        startDate: '2021',
+        endDate: 'Present',
+        institute: 'Google'
       },
       {
+        id: 2,
         title: 'Software Engineer Trainee',
-        startDate: '2021-06-01',
-        endDate: '2021-12-01',
-        institue: 'Google'
+        startDate: '2020',
+        endDate: '2021',
+        institute: 'Google'
       },
       {
+        id: 3,
         title: 'Software Intern',
-        startDate: '2021-01-01',
-        endDate: '2021-06-01',
-        institue: 'LinkedIn'
+        startDate: '2019',
+        endDate: '2020',
+        institute: 'LinkedIn'
       }
     ],
     education_history: [
       {
+        id: 4,
         title: 'Middle School Detail',
+        institute: 'Institue Name',
         startDate: '2014-04-01',
         endDate: '2015-04-01',
         grade: 'A'
       },
       {
+        id: 5,
         title: 'High School Detals',
+        institute: 'Institue Name',
         startDate: '2016-04-01',
         endDate: '2017-04-01',
         grade: 'A'
       },
       {
+        id: 6,
         title: 'College Details',
+        institute: 'Institue Name',
         startDate: '2017-07-01',
         endDate: '2021-07-01',
         grade: 'A+'
@@ -68,11 +77,13 @@ const getDummyData = () =>{
     ],
     certifications: [
       {
+        id: 7,
         title: 'React Certification',
         institute: 'Udemy',
         date: '2021-04-01'
       },
       {
+        id: 8,
         title: 'Node JS Certification',
         institute: 'Udemy',
         date: '2021-02-01'
@@ -80,10 +91,12 @@ const getDummyData = () =>{
     ],
     projects: [
       {
+        id: 9,
         title: 'Blog Application',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu mauris, convallis quis sem vitae, scelerisque euismod est. Vivamus at dignissim est. Donec eleifend lacus elit, et dictum urna mollis et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis ultrices sapien. Cras erat ipsum'
       },
       {
+        id: 10,
         title: 'Project 2',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut arcu mauris, convallis quis sem vitae, scelerisque euismod est. Vivamus at dignissim est. Donec eleifend lacus elit, et dictum urna mollis et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla quis ultrices sapien. Cras erat ipsum'
       }
@@ -91,7 +104,7 @@ const getDummyData = () =>{
   }
 }
 
-export default {
+export {
   setUserData,
   getUserData,
   getDummyData
