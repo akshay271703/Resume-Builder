@@ -16,6 +16,8 @@
      />
      <LanguageSkills v-if="getResumeState==4"
      />
+     <EducationHistory v-if="getResumeState==5"
+     />
   </div>
 </template>
 
@@ -25,12 +27,14 @@ import Profile from '@/components/BuilderSections/Profile.vue'
 import Contact from '@/components/BuilderSections/Contact.vue'
 import Social from '@/components/BuilderSections/Social.vue'
 import LanguageSkills from '@/components/BuilderSections/LanguageSkills.vue' 
+import EducationHistory from '@/components/BuilderSections/EducationHistory.vue'
 export default {
   components : { 
     Profile,
     Contact,
     Social,
-    LanguageSkills
+    LanguageSkills,
+    EducationHistory
   },
   data(){
     return{

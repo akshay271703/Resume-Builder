@@ -36,4 +36,17 @@ import ResumeForm from './ResumeForm.vue'
   align-items: center;
   justify-content: center;
 }
+@media(max-width: 768px){
+  #resume-body{
+    background: none;
+  }
+  .resume-body{
+    position: relative;
+    max-width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+  }
+}
 </style>
