@@ -14,11 +14,14 @@
       pdf-content-width="900px"
       ref="html2Pdf"
     >
-      <!-- <section slot="pdf-content" class="html2pdf__page-break">
+      <section slot="pdf-content" class="html2pdf__page-break">
         <Template1 />
-      </section> -->
+      </section>
       <section slot="pdf-content" class="html2pdf__page-break">
         <Template2 />
+      </section>
+      <section slot="pdf-content" class="html2pdf__page-break">
+        <Template3 />
       </section>
     </VueHtml2pdf>
     <v-btn class="success my-15" @click="generateReport">Print</v-btn>
@@ -29,6 +32,7 @@
 import VueHtml2pdf from "vue-html2pdf";
 import Template1 from "@/components/Templates/Template1.vue";
 import Template2 from "@/components/Templates/Template2.vue";
+import Template3 from "@/components/Templates/Template3.vue";
 export default {
   methods: {
     generateReport() {
@@ -40,6 +44,7 @@ export default {
     VueHtml2pdf,
     Template1,
     Template2,
+    Template3,
   },
 };
 </script>

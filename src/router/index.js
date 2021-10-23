@@ -1,33 +1,33 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-import Template2 from '../components/Templates/Template2.vue'
-import PrintTemplate from '../views/TemplateForm.vue'
-Vue.use(VueRouter)
+import Template3 from "../components/Templates/Template3.vue";
+import PrintTemplate from "../views/TemplateForm.vue";
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/template',
-    name: 'Template2',
-    component: Template2
+    path: "/template",
+    name: "Template3",
+    component: Template3,
   },
   {
-    path: '/print',
-    name: 'PrintTemplate',
-    component: PrintTemplate
-  }
-]
+    path: "/print",
+    name: "PrintTemplate",
+    component: PrintTemplate,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

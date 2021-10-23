@@ -11,7 +11,9 @@ const getDummyData = () => {
     profile: {
       name: "John Doe",
       profession: "Software Engineer",
-      introduction: "MERN Stack Developer. 5 years of professional experience.",
+      introduction: `Highly ambitious and performance driven with unparalleled work ethics.
+      Strong capacity to manage multiple projects and work independently or with team as per requirement.
+      Proficient in Full Stack Web Development.`,
     },
     contact: {
       address: "Los Angeles, USA",

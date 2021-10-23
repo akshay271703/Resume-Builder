@@ -1,28 +1,28 @@
 const state = {
-  resumeState: 5
-}
+  resumeState: 1,
+};
 
 const actions = {
-  setResumeState({ commit }, value){
-    commit('SET_RESUME_STATE', value)
-  }
-}
+  setResumeState({ commit }, value) {
+    commit("SET_RESUME_STATE", value);
+  },
+};
 
 const mutations = {
-  SET_RESUME_STATE(state, value){
-    state.resumeState = value
-  }
-}
+  SET_RESUME_STATE(state, value) {
+    state.resumeState = value;
+  },
+};
 
 const getters = {
-  getResumeState(state){
+  getResumeState(state) {
     return state.resumeState;
-  }
-}
+  },
+};
 
 export default {
   state,
   actions,
   mutations,
-  getters
-}
+  getters,
+};
